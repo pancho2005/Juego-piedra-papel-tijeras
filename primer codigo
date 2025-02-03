@@ -1,0 +1,19 @@
+import random
+
+def jugar():
+    opciones = ["piedra", "papel", "tijeras"]
+    victorias = 0
+    derrotas = 0
+    empates = 0
+    
+    print("Bienvenidos a Piedra, Papel o Tijeras")
+    
+    while True:
+        jugador = input("Elige piedra, papel o tijeras: ").lower()
+        while jugador not in opciones:
+            print("Opción inválida. Intenta de nuevo.")
+            jugador = input("Elige piedra, papel o tijeras: ").lower()
+        
+        computadora = random.choice(opciones)
+        print(f"La computadora eligió: {computadora}")
+        
